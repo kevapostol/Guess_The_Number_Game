@@ -118,8 +118,7 @@ function showYouWon() {
      * and save it to variable called dialog
      * HINT: Use the 'won' and text parameters
      */
-    // *CODE GOES BELOW HERE *
-
+    const dialog = getDialog("won", text);
     document.getElementById("result").innerHTML = dialog;
 }
 
@@ -130,8 +129,7 @@ function showNumberAbove() {
      * and save it to variable called dialog
      * HINT: Use the 'warning' and text parameters
      */
-    // *CODE GOES BELOW HERE *
-
+    const dialog = getDialog("warning", text);
     document.getElementById("result").innerHTML = dialog;
 }
 
@@ -142,7 +140,6 @@ function showNumberBelow() {
      * and save it to variable called dialog
      * HINT: Use the 'warning' and text parameters
      */
-    // *CODE GOES BELOW HERE *
-
+    const dialog = getDialog("warning", text);
     document.getElementById("result").innerHTML = dialog;
 }
