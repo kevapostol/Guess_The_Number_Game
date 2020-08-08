@@ -6,13 +6,13 @@
  * DONE: Create a function called displayResult to move the logic for if the guess is too high, too low, or correct
  * DONE: Complete the showYouWon, showNumberAbove, showNumberBelow
  * DONE: Use the showYouWon... functions within displayResult to display the correct dialog
- * TODO: Save the guess history in a variable called guess
+ * DONE: Save the guess history in a variable called guess
  * TODO: Display the guess history using displayHistory() function
  * TODO: Use the initGame() function to restart the game
  */
 
 // Variable to store the list of guesses
-
+let guesses = [];
 // Variable for store the correct random number
 // Global
 let correctNumber = getRandomNumber();
@@ -31,6 +31,7 @@ window.onload = function () {
 function playGame() {
     let numberGuess = document.getElementById("number-guess").value;
     displayResult(numberGuess);
+    saveGuessHistory(numberGuess);
 }
 
 /**
@@ -74,7 +75,7 @@ function getRandomNumber() {
  * HINT: Use the guesses variable
  */
 function saveGuessHistory(guess) {
-    // *CODE GOES BELOW HERE *
+    guesses.push(guess);
 }
 
 /**
