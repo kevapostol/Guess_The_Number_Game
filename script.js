@@ -27,7 +27,6 @@ window.onload = function () {
  */
 function playGame() {
     let numberGuess = document.getElementById("number-guess").value;
-    console.log(numberGuess);
 }
 
 /**
@@ -56,7 +55,7 @@ function resetResultContent() {
  * HINT: Use Math.random
  */
 function getRandomNumber() {
-    // *CODE GOES BELOW HERE *
+    let correctNumber = Math.floor(Math.random * 100) + 1;
 }
 
 /**
