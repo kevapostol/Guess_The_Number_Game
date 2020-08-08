@@ -88,13 +88,12 @@ function saveGuessHistory(guess) {
  * HINT: use while loop and string concatentation to create a list of guesses
  */
 function displayHistory() {
-    let index;
+    let index = guesses.length - 1;
     let list = "<ul class='list-group'>";
 
-    index = 0;
-    while (index < guesses.length) {
+    while (index >= 0) {
         list += `<li class='list-group-item'>You guessed ${guesses[index]}</li>`;
-        index++;
+        index--;
     }
 
     list += "</ul>";
