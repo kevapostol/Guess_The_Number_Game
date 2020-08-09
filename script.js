@@ -8,15 +8,13 @@
  * DONE: Use the showYouWon... functions within displayResult to display the correct dialog
  * DONE: Save the guess history in a variable called guess
  * DONE: Display the guess history using displayHistory() function
- * TODO: Use the initGame() function to restart the game
+ * DONE: Use the initGame() function to restart the game
  */
 
 // Variable to store the list of guesses
 let guesses = [];
 // Variable for store the correct random number
-// Global
 let correctNumber = getRandomNumber();
-console.log(correctNumber);
 
 window.onload = function () {
     document
@@ -37,7 +35,6 @@ function playGame() {
 
 /**
  * Show the result for if the guess it too high, too low, or correct
- * HINT: Use if, else if, else statement
  */
 function displayResult(numberGuess) {
     if (numberGuess > correctNumber) {
@@ -51,9 +48,17 @@ function displayResult(numberGuess) {
 
 /**
  * Initialize a new game by resetting all values and content on the page
- * HINT: reset the correctNumber, guesses, and HTML content
  */
-function initGame() {}
+function initGame() {
+    // Reset the correctNumber
+    correctNumber = getRandomNumber();
+    // Reset Result display
+    document.getElementById("result").innerHTML = "";
+    // Reset guesses array
+    guesses = [];
+    // Reset the guess history display
+    document.getElementById("history").innerHTML = "";
+}
 
 /**
  * Reset the HTML content for guess history
@@ -64,7 +69,6 @@ function resetResultContent() {
 
 /**
  * Return a random number between 1 and 100
- * HINT: Use Math.random
  */
 function getRandomNumber() {
     return Math.floor(Math.random() * 100) + 1;
@@ -72,8 +76,6 @@ function getRandomNumber() {
 
 /**
  * Save guess history
- * HINT: Search Google "append to array in javascript"
- * HINT: Use the guesses variable
  */
 function saveGuessHistory(guess) {
     guesses.push(guess);
@@ -85,7 +87,6 @@ function saveGuessHistory(guess) {
  * <ul class='list-group'>
  *  <li class='list-group-item'>You guessed {number}</li>
  * </ul>
- * HINT: use while loop and string concatentation to create a list of guesses
  */
 function displayHistory() {
     let index = guesses.length - 1;
@@ -123,7 +124,6 @@ function showYouWon() {
     /**
      * Retrieve the dialog using the getDialog() function
      * and save it to variable called dialog
-     * HINT: Use the 'won' and text parameters
      */
     const dialog = getDialog("won", text);
     document.getElementById("result").innerHTML = dialog;
@@ -134,7 +134,6 @@ function showNumberAbove() {
     /**
      * Retrieve the dialog using the getDialog() function
      * and save it to variable called dialog
-     * HINT: Use the 'warning' and text parameters
      */
     const dialog = getDialog("warning", text);
     document.getElementById("result").innerHTML = dialog;
@@ -145,7 +144,6 @@ function showNumberBelow() {
     /**
      * Retrieve the dialog using the getDialog() function
      * and save it to variable called dialog
-     * HINT: Use the 'warning' and text parameters
      */
     const dialog = getDialog("warning", text);
     document.getElementById("result").innerHTML = dialog;
