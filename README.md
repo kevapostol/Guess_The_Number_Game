@@ -2,6 +2,12 @@
 
 A simple web application let's you guess what the number is.
 
+## Preview
+
+<p align="center">
+  <img src="https://i.ibb.co/2cFR9rF/Screen-Shot-2020-08-10-at-8-28-36-AM.png">
+</p>
+
 ## Status
 
 `DONE`
